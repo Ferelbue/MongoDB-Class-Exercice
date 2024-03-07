@@ -1,11 +1,13 @@
 import { Router } from 'express';
 import authRoutes from "./auth.routes.js";
-import usersRoutes from "./user.routes.js";
+import bookRoutes from "./book.routes.js";
+import loanRoutes from "./loan.routes.js";
 
 const router = Router();
 
 router.use('/auth', authRoutes)
-router.use('/users', usersRoutes)
+router.use('/book', bookRoutes)
+router.use('/loan', loanRoutes)
 
 
 export default router;
