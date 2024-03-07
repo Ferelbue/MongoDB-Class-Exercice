@@ -9,7 +9,7 @@ export const LoanSchema = new Schema(
         },
         userId: {
             type: String,
-            required: true,
+            required: true
         },
         returnDate: {
             type: Date,
