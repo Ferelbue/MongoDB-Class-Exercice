@@ -16,10 +16,10 @@ export const UserSchema = new Schema(
             type: String,
             required: true
         },
-        role:{
+        role: {
             type: String,
-            enum:['user','admin','super-admin'],
-            default:'user'
+            enum: ['user', 'admin', 'super-admin'],
+            default: 'user'
         }
     },
     {
@@ -28,6 +28,6 @@ export const UserSchema = new Schema(
     }
 )
 
-const User = model('User',UserSchema)
+const User = model('User', UserSchema)
 
 export default User
