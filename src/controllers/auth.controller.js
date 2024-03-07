@@ -92,15 +92,15 @@ export const login = async (req, res) => {
             {
                 email: email
             }
-            )
-            
-            if (!user) {
-                res.status(400).json({
-                    success: false,
-                    message: "Email or password invalid"
-                })
-            }
-            
+        )
+
+        if (!user) {
+            res.status(400).json({
+                success: false,
+                message: "Email or password invalid"
+            })
+        }
+
         const isValidPassword = bcrypt.compareSync(password, user.password)
 
         if (!isValidPassword) {
